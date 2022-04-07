@@ -20,4 +20,60 @@
         android:background="@color/white"
         app:menu="@menu/my_navigation_items" />
 
+<!--    <RadioGroup-->
+<!--        android:id="@+id/test_navigation_bar"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:orientation="horizontal">-->
+
+<!--        <RadioButton-->
+<!--            android:id="@+id/test_home"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="1"-->
+<!--            android:button="@null"-->
+<!--            android:checked="true"-->
+<!--            android:drawableTop="@drawable/home_selector"-->
+<!--            android:gravity="center"-->
+<!--            android:text="首页"-->
+<!--            android:textColor="@drawable/navigation_bar_color" />-->
+
+<!--        <RadioButton-->
+<!--            android:id="@+id/test_selected"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="1"-->
+<!--            android:button="@null"-->
+<!--            android:drawableTop="@drawable/select_selector"-->
+<!--            android:gravity="center"-->
+<!--            android:text="精选"-->
+<!--            android:textColor="@drawable/navigation_bar_color" />-->
+
+<!--        <RadioButton-->
+<!--            android:id="@+id/test_red_packet"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="1"-->
+<!--            android:button="@null"-->
+<!--            android:drawableTop="@drawable/on_sell_selector"-->
+<!--            android:gravity="center"-->
+<!--            android:text="特惠"-->
+<!--            android:textColor="@drawable/navigation_bar_color" />-->
+
+<!--        <RadioButton-->
+<!--            android:id="@+id/test_search"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="1"-->
+<!--            android:button="@null"-->
+<!--            android:drawableTop="@drawable/search_selector"-->
+<!--            android:gravity="center"-->
+<!--            android:text="搜索"-->
+<!--            android:textColor="@drawable/navigation_bar_color" />-->
+
+
+<!--    </RadioGroup>-->
+
+
 </RelativeLayout>

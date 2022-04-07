@@ -1,8 +1,9 @@
 package com.example.taobaounion.ui.activity
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.RadioGroup
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.FragmentManager
 import com.example.taobaounion.R
 import com.example.taobaounion.base.BaseFragment
@@ -11,6 +12,7 @@ import com.example.taobaounion.ui.fragment.HomeFragment
 import com.example.taobaounion.ui.fragment.RedPacketFragment
 import com.example.taobaounion.ui.fragment.SearchFragment
 import com.example.taobaounion.ui.fragment.SelectedFragment
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -56,6 +58,17 @@ class MainActivity : AppCompatActivity() {
             }
             true
         }
+
+//        binding.testNavigationBar.setOnCheckedChangeListener { group, checkedId ->
+//            // LogUtils.d(TestActivity.class,"checkedId -- > " + checkedId);
+//            when (checkedId) {
+//                R.id.test_home -> Log.d("MainActivity", "切换到首页")
+//                R.id.test_selected -> Log.d("MainActivity", "切换到精选")
+//                R.id.test_search -> Log.d("MainActivity", "切换到搜索")
+//                R.id.test_red_packet -> Log.d("MainActivity", "切换到特惠")
+//            }
+//        }
+
     }
 
     private fun initFragment() {
@@ -72,4 +85,5 @@ class MainActivity : AppCompatActivity() {
         fragmentTransaction.replace(R.id.main_page_container, targetFragment)
         fragmentTransaction.commit()
     }
+
 }
