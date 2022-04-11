@@ -5,6 +5,8 @@ import android.util.Log
 import android.widget.RadioGroup
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.FragmentManager
+import androidx.viewbinding.ViewBinding
+import by.kirich1409.viewbindingdelegate.viewBinding
 import com.example.taobaounion.R
 import com.example.taobaounion.base.BaseActivity
 import com.example.taobaounion.base.BaseFragment
@@ -17,13 +19,7 @@ import com.example.taobaounion.uitls.FragmentCreator
 import com.example.taobaounion.uitls.LogUtils
 
 
-class MainActivity : BaseActivity<Any, ActivityMainBinding>(), IActivityForFragment {
-
-
-
-    //    private fun initListener() {
-
-//        }
+class MainActivity : BaseActivity<Any>(), IActivityForFragment {
 
     //        binding.testNavigationBar.setOnCheckedChangeListener { group, checkedId ->
 //            // LogUtils.d(TestActivity.class,"checkedId -- > " + checkedId);
@@ -34,6 +30,8 @@ class MainActivity : BaseActivity<Any, ActivityMainBinding>(), IActivityForFragm
 //                R.id.test_red_packet -> Log.d("MainActivity", "切换到特惠")
 //            }
 //        }
+    private val binding: ActivityMainBinding by viewBinding()
+
     override fun getSubPresenter(): Any? {
         return null
     }
@@ -86,15 +84,18 @@ class MainActivity : BaseActivity<Any, ActivityMainBinding>(), IActivityForFragm
 
                 R.id.red_packet -> {
                     LogUtils.d(this, "initListener: 切换到特惠")
-                    setUpFragment(FragmentCreator.INDEX_RED_PACKET,null)                }
+                    setUpFragment(FragmentCreator.INDEX_RED_PACKET,null)
+                }
 
                 R.id.selected -> {
                     LogUtils.d(this, "initListener: 切换到精选")
-                    setUpFragment(FragmentCreator.INDEX_SELECTED,null)                }
+                    setUpFragment(FragmentCreator.INDEX_SELECTED,null)
+                }
 
                 R.id.search -> {
                     LogUtils.d(this, "initListener: 切换到搜索")
-                    setUpFragment(FragmentCreator.INDEX_SEARCH,null)                }
+                    setUpFragment(FragmentCreator.INDEX_SEARCH,null)
+                }
             }
             true
         }
@@ -123,11 +124,11 @@ class MainActivity : BaseActivity<Any, ActivityMainBinding>(), IActivityForFragm
             lastFragmentIndex = index
             transaction.commit()
         }
-        //updateNavigationCheckedByPosition(index)
     }
 
-    private fun updateNavigationCheckedByPosition(index: Int) {
-
+    override fun getContentView(): Int {
+        return R.layout.activity_main
     }
+
 
 }

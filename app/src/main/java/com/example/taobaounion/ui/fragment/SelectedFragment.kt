@@ -7,15 +7,17 @@ import com.example.taobaounion.presenter.impl.SelectedPagePresenterImpl
 
 class SelectedFragment : BaseFragment<SelectedPagePresenterImpl>() {
     override fun getSubPresenter(): SelectedPagePresenterImpl? {
-        TODO("Not yet implemented")
+        return SelectedPagePresenterImpl()
     }
 
     override fun getOnRetryListener(): View.OnClickListener? {
-        TODO("Not yet implemented")
+        return View.OnClickListener {
+
+        }
     }
 
     override fun getPageLayoutId(): Int {
-        TODO("Not yet implemented")
+        return R.layout.fragment_selected
     }
 
 }

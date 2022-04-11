@@ -7,15 +7,17 @@ import com.example.taobaounion.presenter.impl.SearchPagePresenterImpl
 
 class SearchFragment : BaseFragment<SearchPagePresenterImpl>() {
     override fun getSubPresenter(): SearchPagePresenterImpl? {
-        TODO("Not yet implemented")
+        return SearchPagePresenterImpl()
     }
 
     override fun getOnRetryListener(): View.OnClickListener? {
-        TODO("Not yet implemented")
+        return View.OnClickListener {
+
+        }
     }
 
     override fun getPageLayoutId(): Int {
-        TODO("Not yet implemented")
+        return R.layout.fragment_search
     }
 
 }

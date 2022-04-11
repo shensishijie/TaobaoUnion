@@ -6,6 +6,6 @@ import com.example.taobaounion.view.IHomePageCallback
 
 class HomePagePresenterImpl : IHomePagePresenter, BasePresenter<IHomePageCallback>() {
     override fun loadCategories() {
-        TODO("Not yet implemented")
+
     }
 }

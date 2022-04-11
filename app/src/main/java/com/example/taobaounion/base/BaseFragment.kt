@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.viewbinding.ViewBinding
 import com.example.taobaounion.R
 
 abstract class BaseFragment<P> : Fragment() {
@@ -16,6 +17,7 @@ abstract class BaseFragment<P> : Fragment() {
     protected var presenter: P? = null
 
     private var rootView: ViewGroup? = null
+
 
     abstract fun getSubPresenter(): P?
 
@@ -29,6 +31,7 @@ abstract class BaseFragment<P> : Fragment() {
         val containerView = rootView?.findViewById<ViewGroup>(R.id.fragment_container)
         setUpView(rootView, containerView, inflater)
         presenter = getSubPresenter()
+        //设置相关的事件
         bindEvent()
         loadData()
         return rootView
@@ -61,7 +64,7 @@ abstract class BaseFragment<P> : Fragment() {
         initView(successView!!)
     }
 
-    private fun switchUIByState(state: PageState) {
+    fun switchUIByState(state: PageState) {
         successView?.visibility = if (state == PageState.SUCCESS) View.VISIBLE else View.GONE
         loadingView?.visibility = if (state == PageState.LOADING) View.VISIBLE else View.GONE
         errorView?.visibility = if (state == PageState.ERROR) View.VISIBLE else View.GONE

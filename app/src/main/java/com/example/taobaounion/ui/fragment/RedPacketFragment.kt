@@ -8,14 +8,16 @@ import com.example.taobaounion.presenter.impl.RedPacketPagePresenterImpl
 class RedPacketFragment : BaseFragment<RedPacketPagePresenterImpl>(){
 
     override fun getSubPresenter(): RedPacketPagePresenterImpl? {
-        TODO("Not yet implemented")
+        return RedPacketPagePresenterImpl()
     }
 
     override fun getOnRetryListener(): View.OnClickListener? {
-        TODO("Not yet implemented")
+        return View.OnClickListener {
+
+        }
     }
 
     override fun getPageLayoutId(): Int {
-        TODO("Not yet implemented")
+        return R.layout.fragment_red_packet
     }
 }
